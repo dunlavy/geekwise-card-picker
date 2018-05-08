@@ -48,7 +48,7 @@
 			<div class="ui grid">
 				<div class="row">
 					<div class="seven wide middle aligned column">
-						<button (click)="pickACard()" class="ui big fluid button">
+						<button (click)="pickACard()" [disabled]="!getRemainingCardCount()" class="ui big fluid button">
 							Pick a card!
 						</button>
 					</div>

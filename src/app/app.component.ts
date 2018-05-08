@@ -37,6 +37,10 @@ export class AppComponent implements OnInit {
 		return this._deck.getRemainingCardCount() / this._maxDeckLength * 40;
 	}
 
+	public getRemainingCardCount(): number {
+		return this._deck.getRemainingCardCount();
+	}
+
 	public pickACard(): void {
 		this.usersHand.unshift(this._deck.drawCard());
 	}
