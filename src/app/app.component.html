@@ -56,15 +56,15 @@
 						<div class="life-bar"></div>
 					</div>
 					<div *ngIf="usersHand.length" class="seven wide middle aligned column">
-							You last drew: {{ usersHand[0].rank + " of " + usersHand[0].suit }}
+							You last drew: {{ usersHand[0]?.rank + " of " + usersHand[0]?.suit }}
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="ui left floated compact center aligned segment card-in-hand">
+		<div *ngFor="let card of usersHand" class="ui left floated compact center aligned segment card-in-hand">
 			<button class="ui large button">
-				<h2>card.rank of card.suit</h2>
+				<h2>{{ card?.rank + " of " + card?.suit }}</h2>
 				<span class="return">
 					RETURN
 					<i class="reply icon"></i>
