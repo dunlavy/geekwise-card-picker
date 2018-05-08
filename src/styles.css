@@ -1,0 +1,19 @@
+.card-environment {
+	float: left;
+	width: 60%;
+}
+
+.instruction {
+	float: left;
+	width: 40%;
+	padding-right: 2em;
+}
+
+.main {
+	margin-bottom: 3em;
+	margin-top: 3em;
+}
+
+.clear {
+	clear: left;
+}
