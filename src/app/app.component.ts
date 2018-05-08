@@ -33,4 +33,9 @@ export class AppComponent implements OnInit {
 	public pickACard(): void {
 		this.usersHand.unshift(this._deck.drawCard());
 	}
+
+	public returnCardToDeck(card): void {
+		this.usersHand.splice(this.usersHand.indexOf(card), 1);
+		this._deck.returnCardToDeck(card);
+	}
 }
