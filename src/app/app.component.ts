@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 
+import ICard from "./../interfaces/ICard";
+import Deck from "./../classes/Deck";
+
 @Component({
 	selector: "gw-root",
 	templateUrl: "./app.component.html"
@@ -16,8 +19,18 @@ export class AppComponent implements OnInit {
 	// "private" makes helper methods and properties necessary for this component to work "limited" to
 	// this component
 
+	private _deck: Deck;
+	public usersHand: ICard[];
+
 
 	public ngOnInit(): void {
 		// initialize properties here or inline with declarations - but be consistent!
+
+		this._deck = new Deck();
+		this.usersHand = [];
+	}
+
+	public pickACard(): void {
+		this.usersHand.unshift(this._deck.drawCard());
 	}
 }

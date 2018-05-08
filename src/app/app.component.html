@@ -48,15 +48,15 @@
 			<div class="ui grid">
 				<div class="row">
 					<div class="seven wide middle aligned column">
-						<button class="ui big fluid button">
+						<button (click)="pickACard()" class="ui big fluid button">
 							Pick a card!
 						</button>
 					</div>
 					<div class="one wide bottom aligned column">
 						<div class="life-bar"></div>
 					</div>
-					<div class="seven wide middle aligned column">
-							You last drew: n/a
+					<div *ngIf="usersHand.length" class="seven wide middle aligned column">
+							You last drew: {{ usersHand[0].rank + " of " + usersHand[0].suit }}
 					</div>
 				</div>
 			</div>
