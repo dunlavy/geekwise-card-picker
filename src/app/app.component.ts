@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
 	// this component
 
 	private _deck: Deck;
+	private _maxDeckLength: number;
 	public usersHand: ICard[];
 
 
@@ -27,7 +28,12 @@ export class AppComponent implements OnInit {
 		// initialize properties here or inline with declarations - but be consistent!
 
 		this._deck = new Deck();
+		this._maxDeckLength = this._deck.getRemainingCardCount();
 		this.usersHand = [];
+	}
+
+	public getLifeBarHeight(): number {
+		return this._deck.getRemainingCardCount() / this._maxDeckLength * 40;
 	}
 
 	public pickACard(): void {

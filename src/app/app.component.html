@@ -53,7 +53,11 @@
 						</button>
 					</div>
 					<div class="one wide bottom aligned column">
-						<div class="life-bar"></div>
+						<div class="life-bar"
+						     [ngStyle]="{
+						        height: getLifeBarHeight() + 'px',
+						        backgroundColor: getLifeBarHeight() < 15 ? 'orangered' : 'lime'
+						     }"></div>
 					</div>
 					<div *ngIf="usersHand.length" class="seven wide middle aligned column">
 							You last drew: {{ usersHand[0]?.rank + " of " + usersHand[0]?.suit }}
