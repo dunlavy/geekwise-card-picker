@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
 	selector: "gw-root",
-	templateUrl: "./app.html"
+	templateUrl: "./app.component.html"
 })
 export class AppComponent implements OnInit {
 	// write component code here; create just the properties and methods you need to get the job done
