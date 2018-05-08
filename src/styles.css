@@ -1,3 +1,11 @@
+code {
+	background-color: #ebebeb;
+	font-family: "SFMono-Regular", Consolas, Courier, monospace;
+	padding: 3px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
 .card-environment {
 	float: left;
 	width: 60%;
