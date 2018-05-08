@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
 	}
 
 	public getLifeBarHeight(): number {
+		// multiply by forty because that adjusts our percentage to pixel real estate
 		return this._deck.getRemainingCardCount() / this._maxDeckLength * 40;
 	}
 
